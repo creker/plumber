@@ -10,6 +10,10 @@ cloud.google.com/go/pubsub
 cloud.google.com/go/pubsub/apiv1
 cloud.google.com/go/pubsub/internal/distribution
 cloud.google.com/go/pubsub/internal/scheduler
+# github.com/Azure/go-amqp v0.13.1
+## explicit
+github.com/Azure/go-amqp
+github.com/Azure/go-amqp/internal/testconn
 # github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
 ## explicit
 github.com/alecthomas/template
@@ -123,8 +127,6 @@ github.com/sirupsen/logrus
 # github.com/streadway/amqp v1.0.0
 ## explicit
 github.com/streadway/amqp
-# github.com/urfave/cli/v2 v2.2.0
-## explicit
 # go.opencensus.io v0.22.4
 go.opencensus.io
 go.opencensus.io/internal

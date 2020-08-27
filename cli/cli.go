@@ -22,6 +22,7 @@ type Options struct {
 	Rabbit    *RabbitOptions
 	GCPPubSub *GCPPubSubOptions
 	MQTT      *MQTTOptions
+	ActiveMQ  *ActiveMQOptions
 }
 
 func Handle() (string, *Options, error) {
@@ -30,6 +31,7 @@ func Handle() (string, *Options, error) {
 		Rabbit:    &RabbitOptions{},
 		GCPPubSub: &GCPPubSubOptions{},
 		MQTT:      &MQTTOptions{},
+		ActiveMQ:  &ActiveMQOptions{},
 	}
 
 	app := kingpin.New("plumber", "`curl` for messaging systems. See: https://github.com/batchcorp/plumber")
@@ -52,6 +54,7 @@ func Handle() (string, *Options, error) {
 	HandleRabbitFlags(readCmd, writeCmd, opts)
 	HandleGCPPubSubFlags(readCmd, writeCmd, opts)
 	HandleMQTTFlags(readCmd, writeCmd, opts)
+	HandleActiveMQFlags(readCmd, writeCmd, opts)
 
 	app.Version(version)
 	app.HelpFlag.Short('h')
